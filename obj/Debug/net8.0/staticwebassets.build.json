@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JA6/J8APkDa40uPJxuzdSB4eTiLYj1f26fWudw6AHvA=",
+  "Source": "urlShortener",
+  "BasePath": "_content/urlShortener",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
