@@ -14,7 +14,8 @@ namespace urlShortener.Models
             // Constructor
             public UrlMapping()
             {
-                
+                CreatedAt = DateTime.UtcNow;
+
             }
         }
     

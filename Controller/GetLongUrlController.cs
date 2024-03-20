@@ -7,11 +7,11 @@ namespace urlShortener.Controller;
 [ApiController]
 public class GetLongUrlController: ControllerBase
 {
-    private readonly IGetUrlMapping _getUrlMappingRepository;
+    private readonly IUrlMapping _urlMappingRepository;
 
-    public GetLongUrlController(IGetUrlMapping getUrlMappingRepository)
+    public GetLongUrlController(IUrlMapping urlMappingRepository)
     {
-        _getUrlMappingRepository = getUrlMappingRepository;
+        _urlMappingRepository = urlMappingRepository;
     }
 
     [HttpGet("{shortenedUrl}")]
@@ -21,7 +21,7 @@ public class GetLongUrlController: ControllerBase
     {
         try
         {
-            string? longUrl = _getUrlMappingRepository.GetLongUrl(shortenedUrl);
+            string? longUrl = _urlMappingRepository.GetLongUrl(shortenedUrl);
             if (string.IsNullOrEmpty(longUrl))
                 return NotFound();
 

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using urlShortener.Data;
 using urlShortener.Interfaces;
 using urlShortener.Repository;
+using urlShortener.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IGetUrlMapping, GetUrlRepository>();
+builder.Services.AddScoped<IUrlMapping, UrlRepository>();
+builder.Services.AddTransient<UrlShortenerService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("SupabaseDB"));
