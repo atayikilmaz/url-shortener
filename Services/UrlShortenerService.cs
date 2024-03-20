@@ -14,7 +14,7 @@ namespace urlShortener.Services
             string baseUrl = "https://pielyn.com/"; 
             string uniqueCode = GenerateUniqueIdentifier(longUrl);
 
-            return $"{baseUrl}{uniqueCode}";
+            return uniqueCode;
         }
 
         private string GenerateUniqueIdentifier(string longUrl)

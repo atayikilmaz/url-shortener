@@ -13,9 +13,11 @@ public class UrlRepository: IUrlMapping
     
     private readonly UrlShortenerService _urlShortenerService;
 
-    public UrlRepository(AppDbContext context)
+    public UrlRepository(AppDbContext context, UrlShortenerService urlShortenerService)
     {
         _context = context;
+        _urlShortenerService = urlShortenerService;
+
     }
     
     
@@ -23,17 +25,17 @@ public class UrlRepository: IUrlMapping
 
     public string? GetLongUrl(string shortenedUrl)
     {
-        Console.WriteLine($"Searching for shortened URL: {shortenedUrl}");
+        Console.WriteLine($"Aranıyor: {shortenedUrl}");
         var urlMapping = _context.url_mappings
             .FirstOrDefault(u => u.ShortenedUrl == shortenedUrl);
 
         if (urlMapping == null)
         {
-            Console.WriteLine($"No URL mapping found for shortened URL: {shortenedUrl}");
+            Console.WriteLine($"Uzun Url Bulunamadı: {shortenedUrl}");
         }
         else
         {
-            Console.WriteLine($"Found long URL: {urlMapping.LongUrl}");
+            Console.WriteLine($"Uzun Url Bulundu: {urlMapping.LongUrl}");
         }
 
         return urlMapping?.LongUrl;
@@ -45,10 +47,10 @@ public class UrlRepository: IUrlMapping
         
         UrlMapping urlMapping = new UrlMapping
         {
-            LongUrl = longUrl,
+            LongUrl = longUrl.ToString(),
             ShortenedUrl = shortenedUrl
         };
-        
+        Console.WriteLine(longUrl);
         _context.url_mappings.Add(urlMapping);
         
         try
