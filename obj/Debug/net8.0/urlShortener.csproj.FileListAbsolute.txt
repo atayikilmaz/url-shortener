@@ -104,3 +104,11 @@
 /Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/pheal/Projects/url-shortener/urlShortener/obj/Debug/net8.0/urlShortener.sourcelink.json
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/client/package-lock.json
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/client/url-shortener-fe/package-lock.json
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/client/url-shortener-fe/package.json
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/client/url-shortener-fe/tsconfig.json
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/client/url-shortener-fe/tsconfig.node.json
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/dotenv.net.dll
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/DotNetEnv.dll
+/Users/pheal/Projects/url-shortener/urlShortener/bin/Debug/net8.0/Sprache.dll
