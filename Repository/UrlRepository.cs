@@ -50,13 +50,13 @@ public class UrlRepository: IUrlMapping
             LongUrl = longUrl.ToString(),
             ShortenedUrl = shortenedUrl
         };
-        Console.WriteLine(longUrl);
         _context.url_mappings.Add(urlMapping);
         
         try
         {
             _context.SaveChanges();
             Console.WriteLine("Yeni Url Başarıyla Eklendi.");
+            
         }
         catch (Exception ex)
         {

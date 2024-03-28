@@ -20,7 +20,7 @@ public class CreateShortenedUrlController: ControllerBase
     {
         try
         {
-            string shortenedUrl = _urlMappingRepository.CreateShortenedUrl(longUrl);
+            string shortenedUrl = _urlMappingRepository.CreateShortenedUrl(Uri.UnescapeDataString(longUrl));
             return Ok(shortenedUrl);
         }
         catch (Exception e)
