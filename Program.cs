@@ -18,7 +18,19 @@ builder.Services.AddTransient<UrlShortenerService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("SupabaseDB"));
-}); 
+});
+
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5173") // Update with your frontend URL
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
 
@@ -33,9 +45,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+// Enable CORS
+app.UseCors("AllowSpecificOrigin");
+
 app.MapControllers();
-
-
-
 
 app.Run();
