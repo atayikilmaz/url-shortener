@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import UrlCreator from './Components/UrlCreator';
-import Redirector from './Components/Redirector'; // Import the Redirector component
+import Redirector from './Components/Redirector'; 
 
 const App: React.FC = () => {
   return (

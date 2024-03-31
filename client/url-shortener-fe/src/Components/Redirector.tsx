@@ -15,11 +15,11 @@ const Redirector: React.FC<RedirectorProps> = () => {
         if (!response.ok) {
           throw new Error('Failed to fetch long URL');
         }
-        const data = await response.text(); // Get response as string
-        setLongUrl(data); // Set the string response directly
+        const data = await response.text(); 
+        setLongUrl(data); 
       } catch (error) {
         console.error('Error:', error);
-        // Handle error, e.g., redirect to an error page
+        
       }
     };
 
