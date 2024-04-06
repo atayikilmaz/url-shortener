@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pheal/Projects/url-shortener/urlShortener/urlShortener.csproj": {}
+    "/Users/pheal/Projects/url-shortener/url-shortener/urlShortener.csproj": {}
   },
   "projects": {
-    "/Users/pheal/Projects/url-shortener/urlShortener/urlShortener.csproj": {
+    "/Users/pheal/Projects/url-shortener/url-shortener/urlShortener.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pheal/Projects/url-shortener/urlShortener/urlShortener.csproj",
+        "projectUniqueName": "/Users/pheal/Projects/url-shortener/url-shortener/urlShortener.csproj",
         "projectName": "urlShortener",
-        "projectPath": "/Users/pheal/Projects/url-shortener/urlShortener/urlShortener.csproj",
+        "projectPath": "/Users/pheal/Projects/url-shortener/url-shortener/urlShortener.csproj",
         "packagesPath": "/Users/pheal/.nuget/packages/",
-        "outputPath": "/Users/pheal/Projects/url-shortener/urlShortener/obj/",
+        "outputPath": "/Users/pheal/Projects/url-shortener/url-shortener/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/pheal/.nuget/NuGet/NuGet.Config"

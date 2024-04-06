@@ -25,7 +25,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173") // Update with frontend URL
+            builder.WithOrigins("https://pielyn.com/") // Update with frontend URL
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
