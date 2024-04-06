@@ -25,7 +25,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("https://pielyn.com/") 
+            builder.WithOrigins("https://www.pielyn.com/") 
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
