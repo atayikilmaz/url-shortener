@@ -11,7 +11,7 @@ const Redirector: React.FC<RedirectorProps> = () => {
   useEffect(() => {
     const fetchLongUrl = async () => {
       try {
-        const response = await fetch(`http://localhost:5023/api/GetLongUrl/${shortenedUrlKey}`);
+        const response = await fetch(`https://url-shortener-gejj.onrender.com/api/GetLongUrl/${shortenedUrlKey}`);
         if (!response.ok) {
           throw new Error('Failed to fetch long URL');
         }

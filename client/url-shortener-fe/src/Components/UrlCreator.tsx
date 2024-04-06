@@ -41,7 +41,7 @@ const UrlCreator: React.FC<UrlCreatorProps> = () => {
 
     try {
       const response = await fetch(
-        'http://localhost:5023/api/CreateShortenedUrl/' + encodeURIComponent(url),
+        'https://url-shortener-gejj.onrender.com/api/CreateShortenedUrl/' + encodeURIComponent(url),
         {
           method: 'POST',
         }
