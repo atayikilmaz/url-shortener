@@ -7,26 +7,26 @@ using urlShortener.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Configuration.AddEnvironmentVariables();
+DotNetEnv.Env.Load();
+Console.WriteLine(Environment.GetEnvironmentVariable("SupabaseDB")); // This should print your connection string.
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseNpgsql(Environment.GetEnvironmentVariable("SupabaseDB"));
+});
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUrlMapping, UrlRepository>();
 builder.Services.AddTransient<UrlShortenerService>();
-builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseNpgsql(builder.Configuration.GetConnectionString("SupabaseDB"));
-});
 
-// Configure CORS
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173") // Update with your frontend URL
+            builder.WithOrigins("http://localhost:5173") // Update with frontend URL
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
@@ -45,7 +45,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-// Enable CORS
 app.UseCors("AllowSpecificOrigin");
 
 app.MapControllers();
