@@ -8,7 +8,6 @@ using urlShortener.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 DotNetEnv.Env.Load();
-Console.WriteLine(Environment.GetEnvironmentVariable("SupabaseDB")); // This should print your connection string.
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
